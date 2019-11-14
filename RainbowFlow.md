@@ -1,6 +1,6 @@
 # IDD-final-project-rainbow-blinks
 
-## Project Idea: MusicalBlinks
+## Project Idea: Follow the Rainbow
 *Using Move38's Blinks to create a fun puzzle game*
 
 ## Team:
@@ -12,7 +12,7 @@
 Photo coming soon...
 
 
-## Expected Parts:
+## Parts Used:
 * 6 Blinks boards (custom Arduinos with built in buttons and LEDs)
 * Blinks development kit
 * Lithium ion coin batteries
