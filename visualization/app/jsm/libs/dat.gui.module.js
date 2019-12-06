@@ -1586,7 +1586,6 @@ var NumberControllerBox = function ( _NumberController ) {
 
 	inherits( NumberControllerBox, _NumberController );
 	function NumberControllerBox( object, property, params ) {
-
 		classCallCheck( this, NumberControllerBox );
 		var _this2 = possibleConstructorReturn( this, ( NumberControllerBox.__proto__ || Object.getPrototypeOf( NumberControllerBox ) ).call( this, object, property, params ) );
 		_this2.__truncationSuspended = false;
@@ -1595,6 +1594,7 @@ var NumberControllerBox = function ( _NumberController ) {
 		function onChange() {
 
 			var attempted = parseFloat( _this.__input.value );
+			
 			if ( ! Common.isNaN( attempted ) ) {
 
 				_this.setValue( attempted );
