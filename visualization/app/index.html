@@ -4,12 +4,14 @@
 		<title>three.js webgl - lightning strike</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-		<link type="text/css" rel="stylesheet" href="main.css">
+		<!-- <link type="text/css" rel="stylesheet" href="main.css"> -->
 	</head>
 	<body>
 
 		<div id="container"></div>
 		<div id="info"><a href="http://threejs.org" target="_blank" rel="noopener">three.js</a> webgl - lightning strike</div>
+
+		<script src="/socket.io/socket.io.js"></script>
 
 		<script type="module">
 
@@ -48,6 +50,11 @@
 			var now = Date.now();
 			var elapsed = now - then;
 			var fpsLimit = 1;
+
+			var socket = io();
+			socket.on('update', function(msg){
+				console.log(msg);
+			});
 
 			init();
 			animate();
@@ -121,24 +128,6 @@
 
 				scene.userData.timeRate = 1;
 				sceneFolder.add( scene.userData, 'timeRate', scene.userData.canGoBackwardsInTime ? - 1 : 0, 1 ).name( 'Time rate' ).listen();
-
-				then = Date.now(), fpsLimit = 1;
-				var update = function() {
-
-					requestAnimationFrame(update);
-					now = Date.now();
-    				elapsed = now - then;
-
-					if (fpsLimit && elapsed < 1000 / fpsLimit) {
-						return;
-					}
-
-					scene.userData.timeRate = Math.random();
-
-					then = now - (elapsed % fpsLimit);
-				};
-
-				update();
 
 				sceneFolder.open();
 
@@ -214,13 +203,21 @@
 			}
 
 			//
-
+			then = Date.now(), fpsLimit = 1;
 			function animate() {
 
 				requestAnimationFrame( animate );
+				now = Date.now();
+				elapsed = now - then;
+
+				if (fpsLimit && elapsed < 1000 / fpsLimit) {
+					return;
+				}
 
 				render();
 				stats.update();
+
+				then = now - (elapsed % fpsLimit);
 
 			}
 
