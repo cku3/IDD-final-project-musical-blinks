@@ -199,14 +199,137 @@
 				}
 
 				rayFolder.open();
+				console.log(scene.userData)
 
 			}
 
-			//
+		// 	scene.UserData example
+		// 	{
+		// 	"canGoBackwardsInTime": true,
+		// 	"camera": {
+		// 		"metadata": {
+		// 			"version": 4.5,
+		// 			"type": "Object",
+		// 			"generator": "Object3D.toJSON"
+		// 		},
+		// 		"object": {
+		// 			"uuid": "B03E520D-BAB0-4694-9EE7-9D5662CA9BF3",
+		// 			"type": "PerspectiveCamera",
+		// 			"layers": 1,
+		// 			"matrix": [
+		// 				0.9647715560230445,
+		// 				-3.469446951953614e-18,
+		// 				-0.26308904327028404,
+		// 				0,
+		// 				-0.015303647646193847,
+		// 				0.9983067455014953,
+		// 				-0.05611987397467758,
+		// 				0,
+		// 				0.26264356656425936,
+		// 				0.05816908015614953,
+		// 				0.9631379522457792,
+		// 				0,
+		// 				982.7222409238153,
+		// 				817.6487684481026,
+		// 				3603.7322335027507,
+		// 				1
+		// 			],
+		// 			"fov": 27,
+		// 			"zoom": 1,
+		// 			"near": 200,
+		// 			"far": 100000,
+		// 			"focus": 10,
+		// 			"aspect": 1.5075187969924813,
+		// 			"filmGauge": 35,
+		// 			"filmOffset": 0
+		// 		}
+		// 	},
+		// 	"lightningColor": 11599871,
+		// 	"outlineColor": 65535,
+		// 	"lightningMaterial": {
+		// 		"metadata": {
+		// 			"version": 4.5,
+		// 			"type": "Material",
+		// 			"generator": "Material.toJSON"
+		// 		},
+		// 		"uuid": "2382E5F2-FFFF-4D52-B47A-E8BA02E71F69",
+		// 		"type": "MeshBasicMaterial",
+		// 		"color": 11599871,
+		// 		"depthFunc": 3,
+		// 		"depthTest": true,
+		// 		"depthWrite": true,
+		// 		"stencilWrite": false,
+		// 		"stencilWriteMask": 255,
+		// 		"stencilFunc": 519,
+		// 		"stencilRef": 0,
+		// 		"stencilFuncMask": 255,
+		// 		"stencilFail": 7680,
+		// 		"stencilZFail": 7680,
+		// 		"stencilZPass": 7680
+		// 	},
+		// 	"rayParams": {
+		// 		"sourceOffset": {
+		// 			"x": -570.9785379957397,
+		// 			"y": 1100,
+		// 			"z": 184.3461666220583
+		// 		},
+		// 		"destOffset": {
+		// 			"x": -768.3701302057542,
+		// 			"y": 200,
+		// 			"z": 0
+		// 		},
+		// 		"radius0": 4,
+		// 		"radius1": 4,
+		// 		"minRadius": 2.5,
+		// 		"maxIterations": 7,
+		// 		"isEternal": true,
+		// 		"timeScale": 0.7,
+		// 		"propagationTimeFactor": 0.05,
+		// 		"vanishingTimeFactor": 0.95,
+		// 		"subrayPeriod": 3.5,
+		// 		"subrayDutyCycle": 0.6,
+		// 		"maxSubrayRecursion": 3,
+		// 		"ramification": 7,
+		// 		"recursionProbability": 0.6,
+		// 		"roughness": 0.85,
+		// 		"straightness": 0.6104044061528842,
+		// 		"up0": {
+		// 			"x": 0,
+		// 			"y": 0,
+		// 			"z": 1
+		// 		},
+		// 		"up1": {
+		// 			"x": 0,
+		// 			"y": 0,
+		// 			"z": 1
+		// 		},
+		// 		"radius0Factor": 0.5,
+		// 		"radius1Factor": 0.2,
+		// 		"isStatic": false,
+		// 		"generateUVs": false,
+		// 		"maxSubrays": 50
+		// 	},
+		// 	"outlineEnabled": true,
+		// 	"sceneIndex": 0,
+		// 	"timeRate": 1,
+		// 	"lightningColorRGB": [
+		// 		176,
+		// 		255,
+		// 		255
+		// 	],
+		// 	"outlineColorRGB": [
+		// 		0,
+		// 		255,
+		// 		255
+		// 	]
+		// }
+			
 			then = Date.now(), fpsLimit = 1;
 			function animate() {
 
 				requestAnimationFrame( animate );
+				render();
+				stats.update();
 				now = Date.now();
 				elapsed = now - then;
 
@@ -214,9 +337,7 @@
 					return;
 				}
 
-				render();
-				stats.update();
-
+				scene.userData.rayParams.straightness = Math.random();
 				then = now - (elapsed % fpsLimit);
 
 			}
