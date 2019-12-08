@@ -55,8 +55,8 @@ const parser = new Readline({
 // Read data that is available on the serial port and send it to the websocket
 serial.pipe(parser);
 parser.on('data', function(data) {
-  console.log('Data:', data);
-  io.emit('server-msg', data);
+  console.log('Update:', data);
+  io.emit('update', data);
 });
 //----------------------------------------------------------------------------//
 
@@ -79,14 +79,8 @@ io.on('connect', function(socket) {
     // Use a loop to make sure we read all available data.
     while ((chunk = process.stdin.read()) !== null) {
       process.stdout.write(`data: ${chunk}`);
-      socket.emit('update', {Straightness: `${chunk}`});
+      io.emit('update', `${chunk}` + ';15;20;0;4.5');
     }
-  });
-
-  // if you get the 'ledON' msg, send an 'H' to the Arduino
-  socket.on('ready', function() {
-    console.log('Client is ready to receive traffic.');
-    socket.emit({Straightness: 5})
   });
 
   // if you get the 'disconnect' message, say the user disconnected
