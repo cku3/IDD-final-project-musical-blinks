@@ -1,7 +1,9 @@
 # IDD-final-project-Otakotone
 
 ## Project Idea: Otakotone
-*After a couple iterations, we decided to create a simple music synthesizer and editor using Arduino with a visualization implemented through the Raspberry Pi*
+*After a couple iterations, we decided to create a simple music synthesizer and editor using Arduino with a visualization implemented through the Raspberry Pi. Our previous ideas and prototypes are listed in this repository under the old ReadMe's:*
+- [Blinks Synth](https://github.com/cku3/IDD-final-project-musical-blinks/blob/master/oldIdea.md)
+- [Blinks RainbowFlow Game](https://github.com/cku3/IDD-final-project-musical-blinks/blob/master/RainbowFlow.md)
 
 Project name is inpired by the fun electronic music synthesizer [Otamatone](https://en.wikipedia.org/wiki/Otamatone) and Yuxin's avid love for tako (octopus).
 
