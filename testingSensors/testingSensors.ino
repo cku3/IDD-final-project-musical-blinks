@@ -32,15 +32,15 @@ void setup()
   Serial.println("LIS3DH test!");
   delay(1000);
   
-  if (! lis.begin(0x18)) {   // change this to 0x19 for alternative i2c address
-    Serial.println("Couldnt start");
-    while (1);
-  }
-  
-  lis.setRange(LIS3DH_RANGE_4_G);
-  delay(1000);
-  Serial.print("Range = "); Serial.print(2 << lis.getRange());  
-  Serial.println("G");
+//  if (! lis.begin(0x18)) {   // change this to 0x19 for alternative i2c address
+//    Serial.println("Couldnt start");
+//    while (1);
+//  }
+//  
+//  lis.setRange(LIS3DH_RANGE_4_G);
+//  delay(1000);
+//  Serial.print("Range = "); Serial.print(2 << lis.getRange());  
+//  Serial.println("G");
   /* Set up other input pins */
   pinMode(ENC_A, INPUT_PULLUP);
   pinMode(ENC_B, INPUT_PULLUP);
@@ -72,11 +72,11 @@ void loop()
   int softPot = analogRead(softPotPin);
   int button1 = digitalRead(button1pin);
   int button3 = digitalRead(button3pin);
-  Serial.println("photoresistor1: "); Serial.println(photo1); //550-825
-  lis.read();
+  //Serial.println("photoresistor1: "); Serial.println(photo1); //550-825
+  //lis.read();
   //lis.x - x tilt
   //lis.y - y tilt
-  //lis.z - z tilt
+  //lis.z - z tiltn
   //Serial.println("X:  "); Serial.println(lis.x); 
   //Serial.println("  \tY:  "); Serial.println(lis.y); 
   //Serial.println("  \tZ:  "); Serial.println(lis.z); 
@@ -88,12 +88,12 @@ void loop()
   if( tmpdata) {
     counter4x += tmpdata;
     counter = counter4x/4;
-    /*
+    
     if (prevCounter != counter){
       Serial.print("encoder: ");
       Serial.println(counter);
     }
-    */
+    
     prevCounter = counter;
     
   
@@ -101,7 +101,7 @@ void loop()
   //Serial.println("photoresistor3: "); Serial.println(photo3); //400-750 value range
   //Serial.println("soft pot: "); Serial.println(softPot); //0-1000
   //Serial.println("button1: "); Serial.println(button1); //0 or 1
-  //Serial.println("button3: "); Serial.println(button3); //0 or 1
+  Serial.println("button3: "); Serial.println(button3); //0 or 1
   delay(100);
   }
 }
