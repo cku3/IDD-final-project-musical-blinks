@@ -82,4 +82,8 @@ We connected our synthesizer to a web server that changes when it reads differen
 
 Below is a video of our housed, working synthesizer!
 
-[![Housed Synth]()]()
+[![Housed Synth](https://i.imgur.com/lc6utIn.jpg)](https://youtu.be/UEe66D2w7cY)
+
+Otakotome!
+![overhead view](https://i.imgur.com/NpUhQk9.jpg)
+![otamatome? more like otakotome!!](https://i.imgur.com/v1JuHfR.jpg)
