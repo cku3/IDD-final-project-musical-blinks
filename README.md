@@ -55,8 +55,9 @@ Testing Sensors:
 Testing Mozzi Library:
 ![Testing Mozzi Library](https://i.imgur.com/Hg0AcFP.jpg?1)
 
-We ran into a couple issues with some of the combinations of sensors with the Mozzi library. For example, the photoresistors created a sort of hang in the serial reading, so we decided to do without it. Furthermore, for the accelerometer although it worked when testing all the sensors at once, the Mozzi library used the same internal timer, so the LIS3DH would not be able to be accessed without using a separate Arduino board. Below, we have a video of our breadboard below:
-[insert video here]
+We ran into a couple issues with some of the combinations of sensors with the Mozzi library. For example, the photoresistors created a sort of hang in the serial reading, so we decided to do without it. Furthermore, for the accelerometer although it worked when testing all the sensors at once, the Mozzi library used the same internal timer, so the LIS3DH would not be able to be accessed without using a separate Arduino board. Below, we have a video of our functional synth below:
+
+[![Mozzi Synth Video](https://i9.ytimg.com/vi/MYVobK3GI_c/mq2.jpg?sqp=CPubuu8F&rs=AOn4CLCWQiglEU78GqJM8DSfsaF6UQWfvw)](https://youtu.be/MYVobK3GI_c)
 
 ## Housing:
 ![Transferring to Protoboards](https://i.imgur.com/qV4iF5n.jpg)
