@@ -14,8 +14,13 @@ Project name is inpired by the fun electronic music synthesizer [Otamatone](http
 ![paperproto](./otakotone.jpg)
 
 #### Library we are using: 
-[Mozzi](https://sensorium.github.io/Mozzi/) (to generate algorithmic music on an arduino board)
+[Mozzi](https://sensorium.github.io/Mozzi/) to generate algorithmic music on an arduino board
 
+[Three.js](https://threejs.org/) for 3D object visualization
+
+[Websocket.io](http://websocket.io/) for sending music data from arduino to raspberry pi
+
+[Node.js](https://nodejs.org/en/) for backend webserver
 
 ## Expected Parts:
 * Speaker
