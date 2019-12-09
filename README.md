@@ -48,12 +48,16 @@ Upon connection, the arduino will output some sound signal. The user can interac
 ## Functional Prototype:
 
 We first created our synthesizer using a breadboard in order to make sure the functionality was there. The images below show the breadboard circuitry for testing the sensors and the Mozzi library separately.
-![Testing Sensors](https://imgur.com/lS1iuzc)
-![Testing Mozzi Library](https://imgur.com/Hg0AcFP)
+
+Testing Sensors:
+![Testing Sensors](https://i.imgur.com/lS1iuzc.jpg?1)
+
+Testing Mozzi Library:
+![Testing Mozzi Library](https://i.imgur.com/Hg0AcFP.jpg?1)
 
 We ran into a couple issues with some of the combinations of sensors with the Mozzi library. For example, the photoresistors created a sort of hang in the serial reading, so we decided to do without it. Furthermore, for the accelerometer although it worked when testing all the sensors at once, the Mozzi library used the same internal timer, so the LIS3DH would not be able to be accessed without using a separate Arduino board. Below, we have a video of our breadboard below:
 [insert video here]
 
 ## Housing:
-![Transferring to Protoboards](https://imgur.com/qV4iF5n)
-![Laser Cut Box Assembly](https://imgur.com/XAflrkJ)
+![Transferring to Protoboards](https://i.imgur.com/qV4iF5n.jpg)
+![Laser Cut Box Assembly](https://i.imgur.com/XAflrkJ.jpg)
