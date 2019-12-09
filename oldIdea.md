@@ -3,6 +3,9 @@
 ## Project Idea: MusicalBlinks
 *Using Move38's Blinks to create a simple music synthesizer and editer*
 
+We pivoted from this idea because there were too few ports to access for connecting the speaker.
+Plus, the tone/Mozzi libraries need access to an internal timer, but all three were occupied by other processes.
+
 ## Team:
 * Christine Ku (ECE)
 * Yuxin Zhang (ECE)
