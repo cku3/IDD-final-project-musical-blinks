@@ -24,13 +24,14 @@ Project name is inpired by the fun electronic music synthesizer [Otamatone](http
 
 ## Expected Parts:
 * Speaker
+* Audio Jack
 * Buttons
 * Wires
 * Arduino
 * Raspberry Pi
 * Potentiometer
 * Accelerometer
-* Flex Sensor
+* Encoder
 * Pressure Sensor
 * Cardboard
 * Breadboard
@@ -69,9 +70,14 @@ Our box is a little unconventional compared to the normal rectangular box so we 
 
 ![Laser Cut Box Assembly](https://i.imgur.com/XAflrkJ.jpg)
 
-The .svg files are included [here]().
+The .svg files are included [here](https://github.com/cku3/IDD-final-project-musical-blinks/tree/master/boxes-svg).
 
 ## Final Product:
 
-[![Visualization]()]()
+We connected our synthesizer to a web server that changes when it reads different values from the Arduino sensors. 
+
+[![Visualization](https://i9.ytimg.com/vi/cmjgK5kR16c/mq2.jpg?sqp=CKipuu8F&rs=AOn4CLCQClpfbeXrTsrbYewDWscbMwwwcg)](https://youtu.be/cmjgK5kR16c)
+
+Below is a video of our housed, working synthesizer!
+
 [![Housed Synth]()]()
