@@ -1,0 +1,23 @@
+{
+  "name": "visualization",
+  "version": "1.0.0",
+  "description": "- Prerequisite:",
+  "main": "wpserver.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cku3/IDD-final-project-musical-blinks.git"
+  },
+  "author": "fgao22, cku3, TakoYuxin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cku3/IDD-final-project-musical-blinks/issues"
+  },
+  "homepage": "https://github.com/cku3/IDD-final-project-musical-blinks#readme",
+  "dependencies": {
+    "serialport": "^8.0.5",
+    "socket.io": "^2.3.0"
+  }
+}
