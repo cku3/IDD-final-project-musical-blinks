@@ -84,6 +84,6 @@ Below is a video of our housed, working synthesizer!
 
 [![Housed Synth](https://i.imgur.com/lc6utIn.jpg)](https://youtu.be/UEe66D2w7cY)
 
-Otakotome!
+Otakotone!
 ![overhead view](https://i.imgur.com/NpUhQk9.jpg)
 ![otamatome? more like otakotome!!](https://i.imgur.com/v1JuHfR.jpg)
