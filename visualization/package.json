@@ -18,6 +18,6 @@
   "homepage": "https://github.com/cku3/IDD-final-project-musical-blinks#readme",
   "dependencies": {
     "serialport": "^8.0.5",
-    "socket.io": "^2.3.0"
+    "socket.io": "^2.5.0"
   }
 }
